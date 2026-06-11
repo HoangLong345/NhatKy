@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">Nhật ký</string>
+    <string name="my_diary">Nhật ký của tôi</string>
+    <string name="add_diary">Thêm nhật ký</string>
+    <string name="edit_diary">Chỉnh sửa nhật ký</string>
+    <string name="save">Lưu</string>
+    <string name="back">Quay lại</string>
+    <string name="title">Tiêu đề</string>
+    <string name="content">Nội dung</string>
+    <string name="search_hint">Tìm kiếm theo từ khóa...</string>
+    <string name="no_entry">Chưa có nhật ký nào. Hãy viết gì đó!</string>
+    <string name="no_result">Không tìm thấy kết quả.</string>
+    <string name="settings">Cài đặt</string>
+    <string name="appearance">Giao diện</string>
+    <string name="language">Ngôn ngữ</string>
+    <string name="theme_light">Sáng</string>
+    <string name="theme_dark">Tối</string>
+    <string name="theme_system">Theo hệ thống</string>
+    <string name="lang_vi">Tiếng Việt</string>
+    <string name="lang_en">Tiếng Anh</string>
+    <string name="delete">Xóa</string>
+    <string name="delete_video">Xóa video này</string>
+    <string name="how_is_your_day">Hôm nay của bạn thế nào? (Dùng # để thêm tag)</string>
+    <string name="add_photo">Thêm ảnh</string>
+    <string name="add_video">Thêm video</string>
+    <string name="add_file">Thêm tệp</string>
+    <string name="take_photo">Chụp ảnh</string>
+    <string name="video_limit">Video phải dưới 120 giây</string>
+    <string name="files_count">%d tệp</string>
+</resources>

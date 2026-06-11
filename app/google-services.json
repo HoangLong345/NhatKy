@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "1090171177504",
+    "project_id": "nhatky-38a6a",
+    "storage_bucket": "nhatky-38a6a.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1090171177504:android:422baaa0bf0215eeeb4a45",
+        "android_client_info": {
+          "package_name": "com.example.nhatki"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1090171177504-1lgl5mbjbcg6pboj2dnivjna0gnb89pc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.nhatki",
+            "certificate_hash": "7552b2b73a73d2cb10dcefec2bf995f5d0cd518f"
+          }
+        },
+        {
+          "client_id": "1090171177504-2vlp2vbb4j9mso0d2ihve3eu00jntam2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCpSsxLirH_KcBIjjzohHQfaINQBiqWOto"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1090171177504-2vlp2vbb4j9mso0d2ihve3eu00jntam2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
