@@ -68,21 +68,20 @@ class MainActivity : AppCompatActivity() {
             val appLockEnabled by diaryViewModel.appLockEnabled.collectAsState()
 
             val lifecycleOwner = LocalLifecycleOwner.current
-            DisposableEffect(lifecycleOwner) {
+            DisposableEffect(lifecycleOwner, appLockEnabled) {
                 val observer = LifecycleEventObserver { _, event ->
                     if (event == Lifecycle.Event.ON_START) {
                         val currentTime = System.currentTimeMillis()
                         val timeInBackground = currentTime - lastBackgroundTime
                         
-                        // Rule 1: Always lock on fresh start (if lastBackgroundTime is 0)
-                        // Rule 2: Only lock if background time > 20 seconds
                         if (appLockEnabled) {
+                            // Lock if fresh start OR if back from background after 20s
                             if (lastBackgroundTime == 0L || timeInBackground > 20000) {
                                 isAppUnlocked = false
                                 showBiometricPrompt()
-                            } else {
-                                isAppUnlocked = true
                             }
+                        } else {
+                            isAppUnlocked = true
                         }
                     } else if (event == Lifecycle.Event.ON_STOP) {
                         lastBackgroundTime = System.currentTimeMillis()
@@ -94,12 +93,10 @@ class MainActivity : AppCompatActivity() {
                 }
             }
 
+            // Ensure app is unlocked if user turns OFF the setting while in app
             LaunchedEffect(appLockEnabled) {
                 if (!appLockEnabled) {
                     isAppUnlocked = true
-                } else if (lastBackgroundTime == 0L) { 
-                    // Initial check when app opens and setting is already ON
-                    showBiometricPrompt()
                 }
             }
             

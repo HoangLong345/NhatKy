@@ -2,6 +2,7 @@ package com.example.nhatki.data.model
 
 import androidx.room.Entity
 import androidx.room.PrimaryKey
+import com.google.firebase.firestore.PropertyName
 import java.util.UUID
 
 @Entity(tableName = "diary_entries")
@@ -16,7 +17,11 @@ data class DiaryEntry(
     val videoUris: String = "",
     val fileUris: String = "",
     val tags: String = "", 
-    val isLocked: Boolean = false,
+    
+    @get:PropertyName("isLocked")
+    @set:PropertyName("isLocked")
+    var isLocked: Boolean = false,
+
     val password: String? = null,
     val userId: String = "" // For cloud sync identification
 ) {

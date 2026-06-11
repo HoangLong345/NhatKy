@@ -87,6 +87,7 @@ fun AddEditDiaryScreen(
     var content by rememberSaveable { mutableStateOf("") }
     var mood by rememberSaveable { mutableStateOf("") }
     var isLocked by rememberSaveable { mutableStateOf(false) }
+    var timestamp by rememberSaveable { mutableLongStateOf(System.currentTimeMillis()) }
     
     val allTags by viewModel.allTags.collectAsState()
     val syncStatus by viewModel.syncStatus.collectAsState()
@@ -218,6 +219,7 @@ fun AddEditDiaryScreen(
                 content = entry.content
                 mood = entry.mood
                 isLocked = entry.isLocked
+                timestamp = entry.timestamp
                 imageUris = entry.imageUris.split(",").filter { it.isNotEmpty() }
                 videoUris = entry.videoUris.split(",").filter { it.isNotEmpty() }
                 fileUris = entry.fileUris.split(",").filter { it.isNotEmpty() }
@@ -252,6 +254,7 @@ fun AddEditDiaryScreen(
                             title = title,
                             content = content,
                             mood = mood,
+                            timestamp = timestamp,
                             isLocked = isLocked,
                             tags = extractedTags,
                             imageUris = imageUris.joinToString(","),
